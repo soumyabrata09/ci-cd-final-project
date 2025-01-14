@@ -25,6 +25,4 @@ jobs:
         run: pip list
       - name: Run unit tests with nose
         run: |
-          coverage run --source=app -m nose -v --with-spec --spec-color
-          coverage report
-          coverage xml
+          nosetests -v --with-spec --spec-color --with-coverage
